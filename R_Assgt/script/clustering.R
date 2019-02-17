@@ -1,4 +1,8 @@
-setwd("/Users/Govindraj/Documents/R_Assgt/Data")
+###################################################################################
+#
+#         Segmentation  - This Script contains various Segmentation Analysis
+#
+###################################################################################
 
 library("NbClust") #loading packages after installing
 library("mclust")
@@ -55,6 +59,3 @@ summary(lca_clust)
 lca_clusters <- lca_clust$classification
 lca_clust_summary <- aggregate(std_seg_data[,c("Screen","Cell","OS","Battery","Price")],by=list(lca_clusters),FUN=mean)
 lca_clust_summary
-
-
-
